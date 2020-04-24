@@ -1,8 +1,5 @@
 package ro.alex.util;
 
-import ro.alex.util.DefinitionSearch;
-import ro.alex.util.HttpHelper;
-
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -14,13 +11,24 @@ public class WebServiceDefinitionSearch implements DefinitionSearch {
 
     private static final String URI = "https://googledictionaryapi.eu-gb.mybluemix.net/?define=";
     private final HttpHelper httpHelper;
+    private Language language;
 
     public WebServiceDefinitionSearch() {
         this.httpHelper = new HttpHelper();
     }
 
+    public WebServiceDefinitionSearch(Language language) {
+        this.httpHelper = new HttpHelper();
+        this.language = language;
+    }
+
+    public WebServiceDefinitionSearch(HttpHelper httpHelper, Language language) {
+        this.httpHelper = httpHelper;
+        this.language = language;
+    }
+
     public List<String> getDefinition(String word) {
-        String responseBody = httpHelper.sendGet(URI + word);
+        String responseBody = httpHelper.sendGet(URI + word + "&language=" + language);
 
         return extractDefinitions(responseBody);
     }
