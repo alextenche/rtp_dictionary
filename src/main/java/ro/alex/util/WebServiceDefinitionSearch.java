@@ -27,6 +27,14 @@ public class WebServiceDefinitionSearch implements DefinitionSearch {
         this.language = language;
     }
 
+    public static WebServiceDefinitionSearch newInstance(){
+        return new WebServiceDefinitionSearch(new HttpHelper(), Language.ENGLISH);
+    }
+
+    public static WebServiceDefinitionSearch newForeginLanguageInstance(Language language){
+        return new WebServiceDefinitionSearch(new HttpHelper(), language);
+    }
+
     public List<String> getDefinition(String word) {
         String responseBody = httpHelper.sendGet(URI + word + "&language=" + language);
 
