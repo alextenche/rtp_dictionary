@@ -10,6 +10,10 @@ public class Dictionary {
         search = new WebServiceDefinitionSearch();
     }
 
+    public Dictionary(DefinitionSearch search) {
+        this.search = search;
+    }
+
     public List<String> getDefinitions(String word) {
         return search.getDefinition(word);
     }
