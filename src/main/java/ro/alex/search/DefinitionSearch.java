@@ -1,4 +1,4 @@
-package ro.alex.dictionary;
+package ro.alex.search;
 
 import java.util.List;
 import java.util.function.Function;
@@ -9,7 +9,7 @@ import static java.util.stream.Collectors.toList;
 
 public interface DefinitionSearch {
 
-    public List<String> getDefinition(String word);
+    List<String> getDefinition(String word);
 
     default List<String> extractDefinitions(String json) {
 
