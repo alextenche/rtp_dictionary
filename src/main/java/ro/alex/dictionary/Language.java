@@ -1,4 +1,4 @@
-package ro.alex.util;
+package ro.alex.dictionary;
 
 public enum Language {
 
