@@ -33,6 +33,7 @@ public class HttpHelper {
             Thread.currentThread().interrupt();
             System.out.println("Failed to finish HTTP GET Request");
         }
+        assert response != null;
         return response.body();
     }
 }
