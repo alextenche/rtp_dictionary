@@ -1,11 +1,12 @@
-package ro.alex.dictionary;
+package ro.alex.search;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class LocalBackupDefinitionSearch implements DefinitionSearch {
 
@@ -18,8 +19,7 @@ public class LocalBackupDefinitionSearch implements DefinitionSearch {
 
         String content;
         try {
-            content = Files.readString(Paths.get("rfp_dictionary/src/main/resources/BackupLocalDefinitions.json", String.valueOf(StandardCharsets.UTF_8)));
-
+            content = Files.readString(Paths.get("/home/alex/java/rfp_dictionary/src/main/resources/BackupLocalDefinitions.json"), UTF_8);
         } catch (IOException exception) {
             throw new UncheckedIOException(exception);
         }
