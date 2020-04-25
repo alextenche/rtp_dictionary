@@ -1,9 +1,9 @@
 package ro.alex;
 
-import ro.alex.util.Dictionary;
-import ro.alex.util.HttpHelper;
-import ro.alex.util.Language;
-import ro.alex.util.WebServiceDefinitionSearch;
+import ro.alex.dictionary.Dictionary;
+import ro.alex.dictionary.HttpHelper;
+import ro.alex.dictionary.Language;
+import ro.alex.dictionary.WebServiceDefinitionSearch;
 
 import java.util.List;
 

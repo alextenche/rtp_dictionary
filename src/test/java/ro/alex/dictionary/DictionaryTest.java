@@ -1,8 +1,9 @@
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
+package ro.alex.dictionary;
 
-import ro.alex.util.DefinitionSearch;
-import ro.alex.util.Dictionary;
+import org.junit.jupiter.api.Test;
+
+import ro.alex.dictionary.DefinitionSearch;
+import ro.alex.dictionary.Dictionary;
 
 import java.util.List;
 
