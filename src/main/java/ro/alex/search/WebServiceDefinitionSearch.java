@@ -1,8 +1,10 @@
-package ro.alex.dictionary;
+package ro.alex.search;
+
+import ro.alex.dictionary.HttpHelper;
+import ro.alex.dictionary.Language;
 
 import java.util.List;
 
-import static java.util.Arrays.stream;
 
 public class WebServiceDefinitionSearch implements DefinitionSearch {
 
@@ -24,11 +26,11 @@ public class WebServiceDefinitionSearch implements DefinitionSearch {
         this.language = language;
     }
 
-    public static WebServiceDefinitionSearch newInstance(){
+    public static WebServiceDefinitionSearch newInstance() {
         return new WebServiceDefinitionSearch(new HttpHelper(), Language.ENGLISH);
     }
 
-    public static WebServiceDefinitionSearch newForeginLanguageInstance(Language language){
+    public static WebServiceDefinitionSearch newForeignLanguageInstance(Language language) {
         return new WebServiceDefinitionSearch(new HttpHelper(), language);
     }
 
