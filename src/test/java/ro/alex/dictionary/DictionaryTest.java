@@ -1,9 +1,7 @@
 package ro.alex.dictionary;
 
 import org.junit.jupiter.api.Test;
-
-import ro.alex.dictionary.DefinitionSearch;
-import ro.alex.dictionary.Dictionary;
+import ro.alex.search.DefinitionSearch;
 
 import java.util.List;
 
@@ -13,13 +11,13 @@ public class DictionaryTest {
 
     @Test
     public void dictTest() {
-        Dictionary dictionary = new Dictionary();
+        GeneralDictionary dictionary = new GeneralDictionary();
         List<String> definitions = dictionary.getDefinitions("hello");
         assertEquals(definitions.size(), 3);
     }
 
     public void mockedTest() {
-        Dictionary dictionary2 = new Dictionary(new DummyService());
+        GeneralDictionary dictionary2 = new GeneralDictionary(new DummyService());
 
     }
 
