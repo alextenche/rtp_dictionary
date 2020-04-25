@@ -1,11 +1,12 @@
-package ro.alex.util;
+package ro.alex.dictionary;
 
 import java.util.List;
 
-import static ro.alex.util.WebServiceDefinitionSearch.newForeginLanguageInstance;
-import static ro.alex.util.WebServiceDefinitionSearch.newInstance;
+import static ro.alex.dictionary.WebServiceDefinitionSearch.newForeginLanguageInstance;
 
 public class Dictionary {
+
+    private static final Dictionary ENG = new Dictionary(newForeginLanguageInstance(Language.ENGLISH));
 
     private final DefinitionSearch search;
 
@@ -22,7 +23,7 @@ public class Dictionary {
     }
 
     public static Dictionary english(){
-        return new Dictionary(newInstance());
+        return ENG;
     }
 
     public static Dictionary spanish(){
