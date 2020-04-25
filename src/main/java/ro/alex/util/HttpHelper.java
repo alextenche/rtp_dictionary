@@ -1,4 +1,4 @@
-package ro.alex.dictionary;
+package ro.alex.util;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;

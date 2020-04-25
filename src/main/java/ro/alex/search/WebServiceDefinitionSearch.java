@@ -1,6 +1,6 @@
 package ro.alex.search;
 
-import ro.alex.dictionary.HttpHelper;
+import ro.alex.util.HttpHelper;
 import ro.alex.dictionary.Language;
 
 import java.util.List;
